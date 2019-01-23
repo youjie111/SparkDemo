@@ -6,7 +6,7 @@ import java.sql.*;
 
 public class JDBCSSHChannel {
 //    public static void main(String[] args) {
-//            goSSH(3306,"martin-order-slave-offline.mysql.service.consul",3306,"youjie","sa.shequan.com",22);
+//            goSSH(3306,"hostname",3306,"youjie","跳板机",22);
 //            connDB();
 //        //} catch (Exception e) {
 //         //   System.err.println(e);
@@ -44,7 +44,7 @@ public class JDBCSSHChannel {
         Statement st = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/martin_order", "bigdata_dev", "fDNdCFAOfP");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/martin_order", "用户名", "密码");
             st = conn.createStatement();
             String sql = "SELECT * FROM order_base limit 1";
             rs = st.executeQuery(sql);
