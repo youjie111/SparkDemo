@@ -17,7 +17,7 @@ def main(args: Array[String]): Unit = {
   properties.put("user","bigdata_dev")
   properties.put("password","fDNdCFAOfP")
 
-  JDBCSSHChannel.goSSH(3306,"martin-order-slave-offline.mysql.service.consul",3306,"youjie","sa.shequan.com",22)
+  JDBCSSHChannel.goSSH(3306,"hostname",3306,"youjie","跳板机",22)
   val frame: DataFrame = sql.read.jdbc("jdbc:mysql://localhost:3306/martin_order?useUnicode=true&characterEncoding=utf-8","order_base",properties)
   val unit1: Unit = frame.registerTempTable("demo")
   val df2: DataFrame = sql.sql("select * from demo limit 1")
