@@ -1,14 +1,7 @@
-package cn.weiche.www;
-
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
-
-}
+//package cn.weiche.www;
+//
+//public class App {
+//    public static void main(String[] args) {
+//        System.out.println("hello");
+//    }
+//}
